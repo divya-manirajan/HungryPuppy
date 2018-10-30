@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var location = CGPoint(x: 100, y: 100)
+    
     var points = 0
     
     @IBOutlet weak var pup: UIImageView!
@@ -27,17 +29,20 @@ class ViewController: UIViewController {
                                   y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)
-        while(points <= 10){
-            var x = arc4random_uniform(375)+1
-            var y = arc4random_uniform(667)+1
-            if(pup.center == bone.center){
-                
-            }
+        if(pup.center == bone.center){
+            var w = 78
+            var z = 89
+            location = CGPoint(x: w, y: z)
+            pup.center = location
         }
+        
+        }
+     
+    }
         //location
         //if loop
-    }
+    
 
 
-}
+
 
