@@ -7,19 +7,47 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-    var location = CGPoint(x: 100, y: 100)
+    
+    var audioPlayer = AVAudioPlayer()
+    var munch = AVAudioPlayer()
     
     var points = 0
     
     @IBOutlet weak var pup: UIImageView!
     
+    @IBOutlet weak var end: UIImageView!
+    
+    @IBOutlet weak var reset: UIButton!
+    
+    @IBOutlet weak var Points: UILabel!
     @IBOutlet weak var bone: UIImageView!
     
     override func viewDidLoad() {
+        end.image = UIImage()
+        points = 0
+        Points.text = ("Points: \(points)")
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let sound = Bundle.main.path(forResource: "Yee", ofType: "mp3")
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        catch{
+            print(error)
+        }
+        let sound2 = Bundle.main.path(forResource: "Yee", ofType: "mp3")
+        do{
+            munch = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        catch{
+            print(error)
+        }
+
+        
+        
     }
     
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
@@ -29,19 +57,44 @@ class ViewController: UIViewController {
                                   y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)
-        if(pup.center == bone.center){
-            var w = 78
-            var z = 89
-            location = CGPoint(x: w, y: z)
-            pup.center = location
+        
+        if ((pup.center.x > (bone.center.x - 31) && pup.center.x < (bone.center.x + 31)) && pup.center.y > (bone.center.y - 15) && pup.center.y < (bone.center.y + 15) ){
+            
+            var x = CGFloat(arc4random_uniform(300)) + 20
+            var y = CGFloat(arc4random_uniform(640)) + 20
+            
+            bone.center = CGPoint(x: x, y: y)
+            
+            points += 1
+
+            Points.text = ("Points: \(points)")
+            
+            
+            
+            if(points == 15){
+                end.image = UIImage(named: "end")
+                audioPlayer.play()
+            }
+            
         }
         
+       
         }
-     
-    }
-        //location
-        //if loop
+   
     
+    
+    @IBAction func reset(_ sender: Any) {
+        points = 0
+        Points.text = ("Points: \(points)")
+        end.image = UIImage()
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0
+    }
+    
+    }
+
+    
+
 
 
 

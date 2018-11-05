@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EB684F92190E2F70039941B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB684F82190E2F70039941B /* AVFoundation.framework */; };
+		9EB684FB2190E30E0039941B /* Yee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EB684FA2190E30E0039941B /* Yee.mp3 */; };
 		9EC82F6F2187528100A51482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC82F6E2187528100A51482 /* AppDelegate.swift */; };
 		9EC82F712187528100A51482 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC82F702187528100A51482 /* ViewController.swift */; };
 		9EC82F742187528100A51482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC82F722187528100A51482 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9EB684F82190E2F70039941B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9EB684FA2190E30E0039941B /* Yee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Yee.mp3; sourceTree = "<group>"; };
 		9EC82F6B2187528100A51482 /* PuppyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC82F6E2187528100A51482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EC82F702187528100A51482 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB684F92190E2F70039941B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EB684F72190E2F70039941B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EB684F82190E2F70039941B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EC82F622187528100A51482 = {
 			isa = PBXGroup;
 			children = (
 				9EC82F6D2187528100A51482 /* PuppyGame */,
 				9EC82F6C2187528100A51482 /* Products */,
+				9EB684F72190E2F70039941B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +73,7 @@
 				9EC82F722187528100A51482 /* Main.storyboard */,
 				9EC82F752187528100A51482 /* Assets.xcassets */,
 				9EC82F772187528100A51482 /* LaunchScreen.storyboard */,
+				9EB684FA2190E30E0039941B /* Yee.mp3 */,
 				9EC82F7A2187528100A51482 /* Info.plist */,
 			);
 			path = PuppyGame;
@@ -122,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB684FB2190E30E0039941B /* Yee.mp3 in Resources */,
 				9EC82F792187528100A51482 /* LaunchScreen.storyboard in Resources */,
 				9EC82F762187528100A51482 /* Assets.xcassets in Resources */,
 				9EC82F742187528100A51482 /* Main.storyboard in Resources */,
