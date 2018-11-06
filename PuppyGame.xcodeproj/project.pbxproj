@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E8366E1219227A1001A383D /* munch2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E8366E0219227A1001A383D /* munch2.mp3 */; };
 		9EB684F92190E2F70039941B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB684F82190E2F70039941B /* AVFoundation.framework */; };
 		9EB684FB2190E30E0039941B /* Yee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EB684FA2190E30E0039941B /* Yee.mp3 */; };
 		9EC82F6F2187528100A51482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC82F6E2187528100A51482 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E8366E0219227A1001A383D /* munch2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = munch2.mp3; sourceTree = "<group>"; };
 		9EB684F82190E2F70039941B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9EB684FA2190E30E0039941B /* Yee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Yee.mp3; sourceTree = "<group>"; };
 		9EC82F6B2187528100A51482 /* PuppyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				9EC82F752187528100A51482 /* Assets.xcassets */,
 				9EC82F772187528100A51482 /* LaunchScreen.storyboard */,
 				9EB684FA2190E30E0039941B /* Yee.mp3 */,
+				9E8366E0219227A1001A383D /* munch2.mp3 */,
 				9EC82F7A2187528100A51482 /* Info.plist */,
 			);
 			path = PuppyGame;
@@ -139,6 +142,7 @@
 			files = (
 				9EB684FB2190E30E0039941B /* Yee.mp3 in Resources */,
 				9EC82F792187528100A51482 /* LaunchScreen.storyboard in Resources */,
+				9E8366E1219227A1001A383D /* munch2.mp3 in Resources */,
 				9EC82F762187528100A51482 /* Assets.xcassets in Resources */,
 				9EC82F742187528100A51482 /* Main.storyboard in Resources */,
 			);

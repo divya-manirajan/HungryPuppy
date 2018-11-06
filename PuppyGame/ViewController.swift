@@ -38,9 +38,9 @@ class ViewController: UIViewController {
         catch{
             print(error)
         }
-        let sound2 = Bundle.main.path(forResource: "Yee", ofType: "mp3")
+        let sound2 = Bundle.main.path(forResource: "munch2", ofType: "mp3")
         do{
-            munch = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            munch = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound2!))
         }
         catch{
             print(error)
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         recognizer.setTranslation(CGPoint.zero, in: self.view)
         
         if ((pup.center.x > (bone.center.x - 31) && pup.center.x < (bone.center.x + 31)) && pup.center.y > (bone.center.y - 15) && pup.center.y < (bone.center.y + 15) ){
-            
+            munch.play()
             var x = CGFloat(arc4random_uniform(300)) + 20
             var y = CGFloat(arc4random_uniform(640)) + 20
             
@@ -89,6 +89,7 @@ class ViewController: UIViewController {
         end.image = UIImage()
         audioPlayer.stop()
         audioPlayer.currentTime = 0
+        
     }
     
     }
